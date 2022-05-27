@@ -38,9 +38,9 @@ function createGrid(xCells, yCells) {
         const numberCell = i + 1;
         
         const cell = document.createElement("div");
-        cell.remove()
-        cell.classList.add("cell");
 
+        cell.classList.add("cell");
+        cell.innerHTML = "";
         cell.innerHTML = `<span>${numberCell}</span>`;
 
         
