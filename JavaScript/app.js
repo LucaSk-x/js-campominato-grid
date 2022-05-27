@@ -3,8 +3,9 @@ const gridContainer = document.querySelector(".grid-container")
 let btnPlay = document.getElementById("btnPlay");
 let sizeGrid = 0;
 
+/* al click faccio partire tutto */
 btnPlay.addEventListener("click", function() {
-
+    gridContainer.innerHTML = "";
     let difficulty = document.getElementById("difficulty");
 
 let difficultyUser = difficulty.value;
@@ -18,11 +19,7 @@ let difficultyUser = difficulty.value;
         sizeGrid = 7;
     }
 
-
 console.log(difficultyUser);
-
-
-
 
 /* creo un funzione che mi genera un griglia in base ai valori inseriti */
 function createGrid(xCells, yCells) {
@@ -40,7 +37,7 @@ function createGrid(xCells, yCells) {
         const cell = document.createElement("div");
 
         cell.classList.add("cell");
-        cell.innerHTML = "";
+        cell.innerHTML ="";
         cell.innerHTML = `<span>${numberCell}</span>`;
 
         
